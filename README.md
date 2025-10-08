@@ -17,9 +17,8 @@ This repository presents the main figures and visualized results of the paper *U
 
 ---
 
-## 关键问题（Q&A）
+## 关键问题
 - **Q1：为什么 PINN 能够提升拟合复杂非线性的能力？**  
-
 - **Q2：只是在 loss 里加入物理项就足够了吗？**  
 
 ---
@@ -69,11 +68,15 @@ This repository presents the main figures and visualized results of the paper *U
   <img src="assets/images/fig_11.png" alt="Generator rotor angle comparison" width="80%">
 </div>
 
----
+
 > Answering Q2:
 > 仅依靠在损失中加入物理项并不足以完全解决失稳场景的学习难题。  
 > 因此需要从**网络结构**上进一步引导高/低频的分工与表示能力，提出 **SD-PINN**（子空间分解的 PINN）结构作为后续改进方向。
 
+---
+
+## Proposed Method
+### SD-PINN Architechture
 
 
 
