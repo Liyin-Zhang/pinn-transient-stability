@@ -41,11 +41,12 @@ This repository presents the main figures and visualized results of the paper *U
 ### 观察 2：加入物理残差训练（PINN）
 - 引入物理残差后，**整体误差下降更快、收敛更稳**。
 ![PINN OUTPUT](assets/images/fig_06.gif)
-- 物理残差对高频误差的梯度**显著放大**，网络被迫修正高频细节，因而更快收敛、误差更低。
+- 物理残差对高频误差的梯度**显著放大**
 <div align="center">
-  <img src="assets/images/fig_07.png" alt="Second-order-deviation" width="90%">
+  <img src="assets/images/fig_07.png" alt="Second-order-deviation" width="60%">
 </div>
-
+- 网络被迫修正高频细节，因而更快收敛、误差更低。
+![DNN PINN COMPARISON](assets/images/fig_08.gif)
 
 ### 观察 3：稳定 vs 失稳场景
 - **失稳场景更难训练**：其收敛速度显著慢于稳定场景。  
