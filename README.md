@@ -79,7 +79,7 @@ The proposed **SD-PINN** adopts parallel low- and high-frequency branches, impro
 - **Activations:** Use SiLU in the low-frequency branch to emphasize smooth trends and suppress unnecessary high-frequency content; use SIREN-like sinusoidal activations in the high-frequency branch with a first-layer frequency amplification factor \(\omega_0\) to accelerate learning of oscillatory components.  
 - **Losses:** On top of data and physics residual terms, add spectral regularization with band constraints and a normalized inner-product orthogonality constraint based on second derivatives.
 <div align="center">
-  <img src="assets/images/fig_12.png" alt="SD-PINN Architechture" width="80%">
+  <img src="assets/images/fig_12.png" alt="SD-PINN Architechture" width="60%">
 </div>
 
 ### Training Results
