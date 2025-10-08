@@ -46,12 +46,9 @@ This repository presents the main figures and visualized results of the paper *U
 - 网络被迫修正高频细节，因而更快收敛、误差更低。
 ![DNN PINN COMPARISON](assets/images/fig_08.gif)
 
-> **Answering Q1**  
+> **<mark>Answering Q1</mark>**  
 > 物理残差项在频域上对高频误差具有放大效应，促使网络更快纠正高频细节，从而提升整体拟合质量与稳定性。
 
-| 📌 **Answering Q1** |
-|---|
-| 物理残差项在频域上对高频误差具有放大效应，促使网络更快纠正高频细节，从而提升整体拟合质量与稳定性。 |
 
 ### 观察 3：稳定 vs 失稳场景
 - **失稳场景更难训练**：其收敛速度显著慢于稳定场景,主要是由于二阶导数中出现高频信号，很难学习（图中第四行）
