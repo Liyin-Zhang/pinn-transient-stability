@@ -29,7 +29,8 @@ This repository presents the main figures and visualized results of the paper *U
 ## 实证观察
 ### 观察 1：仅用数据训练（DNN）
 - 在平坦与振荡特征并存的序列中，网络更偏好**平坦特征**。  
-- 训练先学“**轮廓**”（低频），再补“**细节**”（高频）。  
+- 训练先学“**轮廓**”（低频），再补“**细节**”（高频）。
+![DNN OUTPUT](assets/images/fig_04.gif)
 > 这对应**频率原则（Frequency Principle）**：标准 MLP 在梯度下降中倾向优先拟合低频分量，随后才逐步拟合高频分量。
 
 ### 观察 2：加入物理残差训练（PINN）
