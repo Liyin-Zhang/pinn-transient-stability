@@ -19,7 +19,6 @@ This repository presents the main figures and visualized results of the paper *U
 
 ## 关键问题（Q&A）
 - **Q1：为什么 PINN 能够提升拟合复杂非线性的能力？**  
-  A：物理残差项在频域上对高频误差具有放大效应，促使网络更快纠正高频细节，从而提升整体拟合质量与稳定性。
 
 - **Q2：只是在 loss 里加入物理项就足够了吗？**  
   A：在一般稳定场景下可显著提升收敛性；但在**失稳场景**中仍存在训练困难，需要在网络结构与表示能力上进一步改进（见最后的 SD-PINN 结构）。
@@ -34,9 +33,11 @@ This repository presents the main figures and visualized results of the paper *U
 > 这对应 **频率原则（Frequency Principle）**：标准 MLP 在梯度下降中倾向优先拟合低频分量，随后才逐步拟合高频分量。  
 > 参考文献：Xu, Zhi-Qin John; Zhang, Yaoyu; Xiao, Yanyang. *Training behavior of deep neural networks in frequency domain.* arXiv: [1807.01251](https://arxiv.org/abs/1807.01251)
 <div align="center">
-  <img src="assets/images/fig_05_1.gif" alt="Training Dynamics" width="45%">
-  <img src="assets/images/fig_05_2.gif" alt="Swing Process" width="45%">
+  <img src="assets/images/fig_05_1.gif" alt="Training Dynamics" width="35%">
+  <img src="assets/images/fig_05_2.gif" alt="Swing Process" width="35%">
 </div>
+
+
 
 ### 观察 2：加入物理残差训练（PINN）
 - 引入物理残差后，**整体误差下降更快、收敛更稳**。
@@ -49,17 +50,19 @@ This repository presents the main figures and visualized results of the paper *U
 - 网络被迫修正高频细节，因而更快收敛、误差更低。
 ![DNN PINN COMPARISON](assets/images/fig_08.gif)
 
-### 观察 3：稳定 vs 失稳场景
-- **失稳场景更难训练**：其收敛速度显著慢于稳定场景。  
-- 即便加入物理约束，失稳样本的最终精度仍**难以达到**稳定样本水平。
+> 物理残差项在频域上对高频误差具有放大效应，促使网络更快纠正高频细节，从而提升整体拟合质量与稳定性。
 
+
+### 观察 3：稳定 vs 失稳场景
+- **失稳场景更难训练**：其收敛速度显著慢于稳定场景。
+- 即便加入物理约束，失稳样本的最终精度仍**难以达到**稳定样本水平。
+![Unstable](assets/images/fig_09.gif)
 ---
 
 ## 失稳场景的特性与挑战
-- 失去同步后，功角轨迹中出现**高频振荡**。  
-- 由于发电机间的电磁功率耦合，**高频信号会在多机之间传播**。  
-- 相比稳定场景，**高频分量显著增多**，在一阶/二阶导数中差异尤为明显。  
-- 高频增多导致 PINN 在失稳场景中的训练效果**显著下降**（更难逼近高频细节）。
+- 失去同步后，功角轨迹中出现**高频振荡**。由于发电机间的电磁功率耦合，**高频信号会在多机之间传播**。
+    
+- 相比稳定场景，**高频分量显著增多**，在一阶/二阶导数中差异尤为明显。高频增多导致 PINN 在失稳场景中的训练效果**显著下降**（更难逼近高频细节）。
 
 ---
 
