@@ -8,6 +8,7 @@ This repository presents the main figures and visualized results of the paper *U
 <div align="center">
   <img src="assets/images/fig_02.png" alt="Swing Function" width="50%">
 </div>
+
 - **核心思想**：将 PDE/ODE 残差写入损失函数，对网络进行**软约束**  
 - **损失函数构成**：数据误差 + 物理残差 + 边界/初值（利用自动微分在网络输出上直接求导）
 
