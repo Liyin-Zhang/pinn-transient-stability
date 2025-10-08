@@ -1,4 +1,4 @@
-# Understanding PINN Training Dynamics
+<img width="139" height="49" alt="image" src="https://github.com/user-attachments/assets/20252782-2c0c-4a43-943b-3bf96ab332e8" /># Understanding PINN Training Dynamics
 This repository presents the main figures and visualized results of the paper *Understanding PINN Training Dynamics: Frequency Principle and Its Mitigation in Power System Transient Stability*.
 
 ## 使用 PINN 进行电力系统暂态稳定分析
@@ -38,7 +38,6 @@ This repository presents the main figures and visualized results of the paper *U
 </div>
 
 
-
 ### 观察 2：加入物理残差训练（PINN）
 - 引入物理残差后，**整体误差下降更快、收敛更稳**。
 ![PINN OUTPUT](assets/images/fig_06.gif)
@@ -54,14 +53,17 @@ This repository presents the main figures and visualized results of the paper *U
 
 
 ### 观察 3：稳定 vs 失稳场景
-- **失稳场景更难训练**：其收敛速度显著慢于稳定场景。
+- **失稳场景更难训练**：其收敛速度显著慢于稳定场景,主要是由于二阶导数中出现高频信号，很难学习（图中第四行）
 - 即便加入物理约束，失稳样本的最终精度仍**难以达到**稳定样本水平。
 ![Unstable](assets/images/fig_09.gif)
 ---
 
 ## 失稳场景的特性与挑战
 - 失去同步后，功角轨迹中出现**高频振荡**。由于发电机间的电磁功率耦合，**高频信号会在多机之间传播**。
-    
+<div align="center">
+  <img src="assets/images/fig_10.png" alt="Generator oscillations " width="80%">
+</div>
+
 - 相比稳定场景，**高频分量显著增多**，在一阶/二阶导数中差异尤为明显。高频增多导致 PINN 在失稳场景中的训练效果**显著下降**（更难逼近高频细节）。
 
 ---
