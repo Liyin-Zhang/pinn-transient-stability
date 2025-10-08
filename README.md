@@ -61,7 +61,7 @@ This repository presents the main figures and visualized results of the paper *U
 ## 失稳场景的特性与挑战
 - 失去同步后，功角轨迹中出现**高频振荡**。由于发电机间的电磁功率耦合，**高频信号会在多机之间传播**。
 <div align="center">
-  <img src="assets/images/fig_10.png" alt="Generator oscillations " width="80%">
+  <img src="assets/images/fig_10.png" alt="Generator oscillations " width="100%">
 </div>
 
 - 相比稳定场景，**高频分量显著增多**，在一阶/二阶导数中差异尤为明显。高频增多导致 PINN 在失稳场景中的训练效果**显著下降**（更难逼近高频细节）。
