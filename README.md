@@ -87,7 +87,7 @@ This repository presents the main figures and visualized results of the paper *U
 ### Training Results
 - 所提SD-PINN能够有效提升对不稳定场景的拟合能力，其在早期就能够较好地刻画高频信号
 <div align="center">
-  <img src="assets/images/fig_13.png" alt="MSE" width="80%">
+  <img src="assets/images/fig_13.png" alt="MSE" width="60%">
 </div>
 
 - 对比输出中不同频率分量的收敛情况，能够明显观察到频率原则，且所提SD-PINN显著加快了高频分量的收敛速度。
@@ -97,6 +97,9 @@ This repository presents the main figures and visualized results of the paper *U
 
 - 观察低频和高频输出的动态过程，可见两个分支成功地关注不同频段的分量
 ![SD-PINN DYNAMIC](assets/images/fig_15.gif)
+<div align="center">
+  <img src="assets/images/fig_16.png" alt="Frequency Dynamics" width="80%">
+</div>
 
 
 
