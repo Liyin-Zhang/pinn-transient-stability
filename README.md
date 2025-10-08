@@ -45,6 +45,7 @@ This repository presents the main figures and visualized results of the paper *U
 <div align="center">
   <img src="assets/images/fig_07.png" alt="Second-order-deviation" width="60%">
 </div>
+
 - 网络被迫修正高频细节，因而更快收敛、误差更低。
 ![DNN PINN COMPARISON](assets/images/fig_08.gif)
 
