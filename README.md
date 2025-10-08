@@ -68,7 +68,7 @@ This repository presents the main figures and visualized results of the paper *U
 </div>
 
 
-> Answering Q2:
+> **<mark>Answering Q2</mark>**  
 > 仅依靠在损失中加入物理项并不足以完全解决失稳场景的学习难题。  
 > 因此需要从**网络结构**上进一步引导高/低频的分工与表示能力，提出 **SD-PINN**（子空间分解的 PINN）结构作为后续改进方向。
 
@@ -76,7 +76,15 @@ This repository presents the main figures and visualized results of the paper *U
 
 ## Proposed Method
 ### SD-PINN Architechture
+所提 **SD-PINN** 采用低频–高频并列分支结构，围绕频率原则进行机制化改进，以实现显式谱域解耦并加速收敛。  
+- **输入**：对时间变量引入多频傅里叶特征映射 \(\phi(t)\)，并与系统状态特征拼接，显式提供高频基函数以提升跨频段可表示性。  
+- **激活函数**：低频分支采用 SiLU 以强化平滑趋势表征并抑制非必要高频；高频分支采用 SIREN 式正弦激活，并在首层使用频率放大因子 \(\omega_0\) 以加速振荡成分学习。  
+- **损失函数**：在数据项与物理残差项基础上，引入频带约束的谱正则、基于二阶导的归一化内积正交约束。
+<div align="center">
+  <img src="assets/images/fig_12.png" alt="SD-PINN Architechture" width="80%">
+</div>
 
+### Training Results
 
 
 
