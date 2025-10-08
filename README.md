@@ -4,7 +4,8 @@ This repository presents the main figures and visualized results of the paper *U
 ## 使用 PINN 进行电力系统暂态稳定分析
 - **任务**：模拟故障后数秒内同步发电机的功角轨迹，进行稳定性判断
 ![Generator Angle Trajectory](assets/images/fig_01.gif)
-- **本质**：求解转子摇摆方程  
+- **本质**：求解转子摇摆方程
+![Swing Function](assets/images/fig_02.png)  
 - **核心思想**：将 PDE/ODE 残差写入损失函数，对网络进行**软约束**  
 - **损失函数构成**：数据误差 + 物理残差 + 边界/初值（利用自动微分在网络输出上直接求导）
 
