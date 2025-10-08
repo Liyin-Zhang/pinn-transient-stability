@@ -1,4 +1,4 @@
-<img width="139" height="49" alt="image" src="https://github.com/user-attachments/assets/20252782-2c0c-4a43-943b-3bf96ab332e8" /># Understanding PINN Training Dynamics
+# Understanding PINN Training Dynamics
 This repository presents the main figures and visualized results of the paper *Understanding PINN Training Dynamics: Frequency Principle and Its Mitigation in Power System Transient Stability*.
 
 ## 使用 PINN 进行电力系统暂态稳定分析
