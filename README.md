@@ -21,7 +21,6 @@ This repository presents the main figures and visualized results of the paper *U
 - **Q1：为什么 PINN 能够提升拟合复杂非线性的能力？**  
 
 - **Q2：只是在 loss 里加入物理项就足够了吗？**  
-  A：在一般稳定场景下可显著提升收敛性；但在**失稳场景**中仍存在训练困难，需要在网络结构与表示能力上进一步改进（见最后的 SD-PINN 结构）。
 
 ---
 
@@ -49,6 +48,7 @@ This repository presents the main figures and visualized results of the paper *U
 - 网络被迫修正高频细节，因而更快收敛、误差更低。
 ![DNN PINN COMPARISON](assets/images/fig_08.gif)
 
+> Answering Q1:
 > 物理残差项在频域上对高频误差具有放大效应，促使网络更快纠正高频细节，从而提升整体拟合质量与稳定性。
 
 
@@ -70,10 +70,9 @@ This repository presents the main figures and visualized results of the paper *U
 </div>
 
 ---
-
-## 结论与改进方向
-- 仅依靠在损失中加入物理项并不足以完全解决失稳场景的学习难题。  
-- 因此需要从**网络结构**上进一步引导高/低频的分工与表示能力，提出 **SD-PINN**（子空间分解的 PINN）结构作为后续改进方向。
+> Answering Q2:
+> 仅依靠在损失中加入物理项并不足以完全解决失稳场景的学习难题。  
+> 因此需要从**网络结构**上进一步引导高/低频的分工与表示能力，提出 **SD-PINN**（子空间分解的 PINN）结构作为后续改进方向。
 
 
 
