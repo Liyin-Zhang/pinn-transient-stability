@@ -31,7 +31,8 @@ This repository presents the main figures and visualized results of the paper *U
 - 在平坦与振荡特征并存的序列中，网络更偏好**平坦特征**。  
 - 训练先学“**轮廓**”（低频），再补“**细节**”（高频）。
 ![DNN OUTPUT](assets/images/fig_04.gif)
-> 这对应**频率原则（Frequency Principle）**：标准 MLP 在梯度下降中倾向优先拟合低频分量，随后才逐步拟合高频分量。
+> 这对应 **频率原则（Frequency Principle）**：标准 MLP 在梯度下降中倾向优先拟合低频分量，随后才逐步拟合高频分量。  
+> 参考文献：Xu, Zhi-Qin John; Zhang, Yaoyu; Xiao, Yanyang. *Training behavior of deep neural networks in frequency domain.* arXiv: [1807.01251](https://arxiv.org/abs/1807.01251)
 <div align="center">
   <img src="assets/images/fig_05_1.gif" alt="Training Dynamics" width="45%">
   <img src="assets/images/fig_05_2.gif" alt="Swing Process" width="45%">
