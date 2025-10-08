@@ -65,6 +65,9 @@ This repository presents the main figures and visualized results of the paper *U
 </div>
 
 - 相比稳定场景，**高频分量显著增多**，在一阶/二阶导数中差异尤为明显。高频增多导致 PINN 在失稳场景中的训练效果**显著下降**（更难逼近高频细节）。
+<div align="center">
+  <img src="assets/images/fig_11.png" alt="Generator rotor angle comparison" width="100%">
+</div>
 
 ---
 
