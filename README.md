@@ -101,6 +101,14 @@ This repository presents the main figures and visualized results of the paper *U
   <img src="assets/images/fig_16.png" alt="Frequency Dynamics" width="60%">
 </div>
 
+## Conclusion
+- 神经网络训练遵循频率原则：先易后难，低频优先。
+- PINN 在频域中强化高频成分：加速学习振荡行为，使结果更符合物理规律。
+- 数据特征与模型偏置需要匹配：不稳定样本中的高频振荡需针对性处理。
+- SD-PINN：能够更高效地捕捉不同频段特征，尤其是高频动态。
+
+
+
 
 
 
