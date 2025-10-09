@@ -9,7 +9,7 @@ This repository presents the main figures and visualized results of the paper *U
   <img src="assets/images/fig_02.png" alt="Swing Function" width="50%">
 </div>
 
-- **Core idea:** Embed PDE/ODE residuals into the loss as **soft physics constraints**.  
+- **Core idea:** Embed PDE/ODE residuals into the loss as **physics constraints**.  
 - **Loss composition:** data error + physics residual + boundary/initial conditions (derivatives taken on network outputs via automatic differentiation).
 <div align="center">
   <img src="assets/images/fig_03.png" alt="Swing Function" width="80%">
@@ -75,8 +75,8 @@ This repository presents the main figures and visualized results of the paper *U
 ## Proposed Method
 ### SD-PINN Architecture
 The proposed **SD-PINN** adopts parallel low- and high-frequency branches, improving training in light of the **frequency principle** to achieve explicit spectral decoupling and faster convergence.  
-- **Inputs:** Introduce multi-frequency Fourier feature mapping \(\phi(t)\) for time and concatenate with system-state features, explicitly supplying high-frequency bases to enhance cross-band representational capacity.  
-- **Activations:** Use SiLU in the low-frequency branch to emphasize smooth trends and suppress unnecessary high-frequency content; use SIREN-like sinusoidal activations in the high-frequency branch with a first-layer frequency amplification factor \(\omega_0\) to accelerate learning of oscillatory components.  
+- **Inputs:** Introduce multi-frequency Fourier feature mapping $\phi(t)$ for time and concatenate with system-state features, explicitly supplying high-frequency bases to enhance cross-band representational capacity.  
+- **Activations:** Use SiLU in the low-frequency branch to emphasize smooth trends and suppress unnecessary high-frequency content; use SIREN-like sinusoidal activations in the high-frequency branch with a first-layer frequency amplification factor $\omega_0$ to accelerate learning of oscillatory components.  
 - **Losses:** On top of data and physics residual terms, add spectral regularization with band constraints and a normalized inner-product orthogonality constraint based on second derivatives.
 <div align="center">
   <img src="assets/images/fig_12.png" alt="SD-PINN Architechture" width="60%">
