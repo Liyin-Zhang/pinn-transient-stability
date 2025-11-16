@@ -1,5 +1,5 @@
-# Understanding PINN Training Dynamics: Frequency Principle and Its Mitigation in Power System Transient Stability
-This repository presents the main figures and visualized results of the paper *Understanding PINN Training Dynamics: Frequency Principle and Its Mitigation in Power System Transient Stability*.
+# Understanding PINN Training Dynamics in Power System Transient Stability Assessment
+This repository presents the main figures and visualized results of the paper *Understanding PINN Training Dynamics in Power System Transient Stability Assessment*.
 
 ## Transient Stability Analysis with PINNs
 - **Task:** Simulate rotor-angle trajectories of synchronous generators in the few seconds following a fault and assess stability.
